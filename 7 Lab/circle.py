@@ -11,6 +11,7 @@ pygame.display.update()
 while done:
     screen.fill((255 , 255 , 255))
     cercle1 = pygame.draw.circle(screen, (255 , 0 , 0), (x , y), 25 ,width=0)
+    
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             done = False

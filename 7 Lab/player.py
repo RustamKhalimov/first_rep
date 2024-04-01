@@ -4,22 +4,22 @@ pygame.mixer.init()
 screen = pygame.display.set_mode((512,512))
 screen.fill("white") 
 counter = 0
-runer = True
+done = True
 index = 0
-playlist = [r"C:\Users\RHali\Downloads\Кайрат Нуртас – Алматының Түндер-Ай.mp3",
-            r"C:\Users\RHali\Downloads\Кайрат Нуртас – Ауырмайды Жүрек (1).mp3",
-            r"C:\Users\RHali\Downloads\Кайрат Нуртас – Жубатуга Арналады Бул Аним.mp3",
-            r"C:\Users\RHali\Downloads\Кайрат Нуртас – Сұранамын.mp3",
-            r"C:\Users\RHali\Downloads\Kairat Nurtas – Қызыл гүлім-ай.mp3",
-            r"C:\Users\RHali\Downloads\Кайрат Нуртас – Ауырмайды Жүрек.mp3",
-            r"C:\Users\RHali\Downloads\Kairat Nurtas – Seni Suiem.mp3",
-            r"C:\Users\RHali\Downloads\Bejbit_Korgan_Zhanary_ottaj_zhanyp_zhuregimdi_shoқtaj_қaryp.mp3"
+playlist = ['Music`s/Кайрат Нуртас - Журегиннен бир орын бер бос болса 2017-[muzmir.kz].mp3',
+            'Music`s/bambee-bumble-bee-mp3',
+            'Music`s/Думан Марат - Жіберем қалай (2022) [muzik.kz].mp3',
+            'Music`s/Bejbit_Korgan_Zhanary_ottaj_zhanyp_zhuregimdi_shoқtaj_қaryp.mp3',
+            'Music`s/Jah Khalib-Созвездие Ангела/mp3',
+            'Music`s/Kairat Nurtas – Seni Suiem.mp3',
+            'Music`s/Psy - Gangnam Style.mp3',
+            'Music`s/V $ X V PRiNCE & DE LACURE - Big City Life.mp3'
             ]
 pygame.mixer.music.load(playlist[index])
 pygame.mixer.music.play()
 
 pause = True
-while runer:
+while done:
     pygame.display.update()
     for event in pygame.event.get():
         if event.type == pygame.KEYDOWN:
@@ -42,6 +42,6 @@ while runer:
                 screen.fill("white") 
                 
         if event.type == pygame.QUIT:
-            runer = False
+            done = False
             pygame.quit()
             break

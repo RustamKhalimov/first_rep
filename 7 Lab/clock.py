@@ -2,15 +2,15 @@ import datetime
 import pygame
 pygame.init()
 screen = pygame.display.set_mode((829,836))
-runer = True
+done = True
 pygame.display.set_caption('Miki Clock')
 myfont = pygame.font.Font()
 square = pygame.Surface((50,100))
 square.fill((219, 22, 101))
-clock = pygame.image.load(r"C:\Users\RHali\Downloads\clocks.png")
-lefthand = pygame.image.load(r"C:\Users\RHali\Downloads\left_hand.png")
-rightthand = pygame.image.load(r"C:\Users\RHali\Downloads\right_hand.png")
-while runer:
+clock = pygame.image.load('Pictures/clocks.png')
+lefthand = pygame.image.load('Pictures/left_hand.png')
+rightthand = pygame.image.load('Pictures/right_hand.png')
+while done:
     now = datetime.datetime.now()
     s = datetime.datetime.now()
     minutes = now.hour*60 + now.minute
@@ -26,5 +26,5 @@ while runer:
     pygame.display.update()
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            runer = False
+            done = False
             pygame.quit()
